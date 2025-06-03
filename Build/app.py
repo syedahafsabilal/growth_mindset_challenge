@@ -3,18 +3,6 @@ import pandas as pd
 import base64
 import os
 
-
-video_file_path = "workout.mp4"
-
-
-
-if os.path.exists(video_file_path):
-    with open(video_file_path, "rb") as video_file:
-        st.video(video_file)
-else:
-    st.error("❌ File not found. Make sure it's in the same folder as app.py")
-
-
 if "workouts" not in st.session_state:
     st.session_state.workouts =[]
  
